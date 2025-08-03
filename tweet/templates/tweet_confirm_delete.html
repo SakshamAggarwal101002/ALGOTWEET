@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}
+my tweetapp
+{% endblock %}
+{% block content %}
+<h1 class="text-center mt-4">Welcome to my django project</h1>
+<div class="ms-4">  <!-- Added left margin here -->
+  <form method="post">
+    {% csrf_token %}
+    <button class="btn btn-danger">Delete</button>
+    <a class="btn btn-success" href="{% url 'tweet_list' %}">Cancel</a>
+  </form>
+</div>
+{% endblock %}
