@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "tweetapp/wsgi.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "tweetapp/wsgi.py" }
+  ]
+}
