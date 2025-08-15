@@ -32,7 +32,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -133,4 +132,4 @@ STATICFILES_DIRS= [os.path.join(BASE_DIR,'static')]
 LOGIN_URL ='/accounts/login'
 LOGIN_REDIRECT_URL = '/tweet/'
 LOGOUT_REDIRECT_URL = '/tweet/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
